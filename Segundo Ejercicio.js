@@ -1,7 +1,12 @@
-let someResource;
-console.log(someResource);
-console.log(typeof someResource);
+const str = String();
+const num = Number();
+const bool = Boolean();
 
-someResource = null;
-console.log(someResource);
-console.log(typeof someResource);
+console.log(str);
+console.log(num);
+console.log(bool);
+
+const big1 = BigInt(42);
+console.log(big1);
+
+const big2 = BigInt();  //  "BigInt()" requires a number in order to work
