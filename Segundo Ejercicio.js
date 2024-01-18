@@ -1,12 +1,10 @@
 "use strict"
 
-let counter;
-console.log(counter);
+let height = 180;
 {
-    counter = 1;
-    {
-        console.log(counter);
-    }
+    let weight = 70;
+    console.log(height);
+    console.log(weight);
 }
-counter = counter + 1;
-console.log(counter);
+console.log(height);
+console.log(weight);
