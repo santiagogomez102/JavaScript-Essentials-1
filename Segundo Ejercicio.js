@@ -1,12 +1,14 @@
-const str = String();
-const num = Number();
-const bool = Boolean();
+"use strict"
 
-console.log(str);
-console.log(num);
-console.log(bool);
+const num = 42;
 
-const big1 = BigInt(42);
-console.log(big1);
-
-const big2 = BigInt();  //  "BigInt()" requires a number in order to work
+const strFromNum1 = String(num);    //"42"
+console.log(strFromNum1);
+const strFromNum2 = String(8);      //"8"
+console.log(strFromNum2);
+const strFromBool = String(true);   //"true"
+console.log(strFromBool);
+const numFromStr = Number("312");   //312
+console.log(numFromStr);
+const boolFromNumber = Boolean(0);  //false
+console.log(boolFromNumber);
