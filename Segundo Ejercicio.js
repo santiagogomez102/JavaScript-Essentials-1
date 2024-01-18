@@ -1,15 +1,10 @@
 "use strict"
 
-let height = 200;
+var height = 180;
 {
-    let weight = 100;
-    {
-        let info = "tall";
-        console.log(height);
-        console.log(weight);
-        console.log(info);
-    }
+    var weight = 70;
     console.log(height);
     console.log(weight);
-    console.log(info);
 }
+console.log(height);
+console.log(weight);
