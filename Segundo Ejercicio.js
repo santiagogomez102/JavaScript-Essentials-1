@@ -1,3 +1,3 @@
-var height;
-var height;
+let height;
+let height;
 console.log(height);
