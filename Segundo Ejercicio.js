@@ -1,10 +1,10 @@
 "use strict"
 
-let steps = 100;
-steps = 120;
-console.log(steps);
-steps = steps + 200;
-console.log(steps);
-
-const greetings = "Hello";
-greetings = "Hi!";
+let counter;
+console.log(counter);
+{
+    counter = 1;
+    console.log(counter);
+}
+counter = counter + 1;
+console.log(counter);
