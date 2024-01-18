@@ -12,9 +12,7 @@ console.log("Santiago Gomez (1997)");
 //  giving the name, surname, and year as separate arguments.
 console.log("Santiago", "Gomez", "(1997)");
 //Question 5: Output the same information (name, surname, year) to the console, not side by side, but on consecutive lines.
-console.log("Santiago");
-console.log("Gomez");
-console.log("(1997)");
+console.log("Santiago"); console.log("Gomez"); console.log("(1997)");
 //Question 6: A string can be concatenated using the + sign, for example "abc" + "def" will be treated as "abcdef". Try writing your name, surname, and year of birth on one line again, this time not separated by commas, but by + signs.
 console.log("Santiago"+"Gomez"+"(1997)");
 //Question 7: Put spaces in the appropriate places, so that when displayed, you get the same effect as in Question 4.
