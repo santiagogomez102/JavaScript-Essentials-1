@@ -1,10 +1,6 @@
 "use strict"
 
-var height = 180;
-{
-    var weight = 70;
-    console.log(height);
-    console.log(weight);
+function testFunction() {
+    console.log("Hello");
+    console.log("World");
 }
-console.log(height);
-console.log(weight);
