@@ -1,6 +1,16 @@
 "use strict"
 
+var globalGreeting = "Good ";
+
 function testFunction() {
-    console.log("Hello");
-    console.log("World");
+    var localGreeting = "Morning";
+    console.log("function:");
+    console.log(globalGreeting);
+    console.log(localGreeting);
 }
+
+testFunction();
+
+console.log("main program:");
+console.log(globalGreeting);
+console.log(localGreeting);
