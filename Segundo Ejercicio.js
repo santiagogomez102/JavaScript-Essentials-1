@@ -6,5 +6,5 @@ console.log(steps);
 steps = steps + 200;
 console.log(steps);
 
-const greetings;
-greetings = "Hello";
+const greetings = "Hello";
+greetings = "Hi!";
