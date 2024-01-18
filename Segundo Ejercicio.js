@@ -1,12 +1,80 @@
-let big = 1234567890000000000000n;
-let big2 = 1n;
+let country = "Malawi";
+let continent = 'Africa';
 
-console.log(big);
-console.log(typeof big);
+console.log(country);
+console.log(typeof country);
+console.log(continent);
+console.log(typeof continent);
 
-console.log(big2);
-console.log(7n / 4n);
+//////////////////
 
-let big3 = 1000n + 20;  //BigInt can't be added with normal numbers
+let message1 = "The vessel 'Mars' called ar the port.";
+let message2 = 'Cyclone "Cilida" to pass close to Mauritius.';
 
-let big4 = 1000n / 0n;  //Dividing by 0 returns an error
+console.log(message1);
+console.log(message2);
+
+//////////////////
+
+let message3 = 'The vessel \'Mars\' called ar the port.';
+let message4 = "Cyclone \"Cilida\" to pass close to Mauritius.";
+
+console.log(message3);
+console.log(message4);
+
+let path = "C:\\Windows";
+console.log(path);
+
+//////////////////
+
+let path2 = "C:\\Windows" - "Windows";
+console.log(path2);
+
+let test = "100" - "10";
+console.log(test);
+console.log(typeof test);
+
+//////////////////
+
+let path3 = "C:\\" + "Windows";
+console.log(path3);
+
+let test2 = "100" + "10";
+console.log(test2);
+console.log(typeof test2);
+
+//////////////////
+
+let country2 = "Malawi";
+let continent2 = "Africa";
+
+let sentence = `${country2} is located in ${continent2}.`;
+console.log(sentence);
+
+//////////////////
+
+console.time();
+console.log("test console");
+console.timeEnd();
+
+//////////////////
+
+let river = "Mekong";
+let character = river.charAt(2);
+console.log(character);
+
+//////////////////
+
+let str = "java script language";
+
+console.log(str.length);
+console.log('test'.length);
+
+console.log(str.charAt(15));
+console.log("abc".charAt(1));
+
+console.log(str.slice(2,9));
+console.log('test'.slice(1,3));
+
+console.log(str.split(" "));
+console.log("192.168.1.1".split('.',3));  // Limited to 3
