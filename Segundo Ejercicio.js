@@ -1,14 +1,16 @@
 "use strict"
 
-console.log(Boolean(true));
+console.log(BigInt(11));
+console.log(BigInt(0x11));
+console.log(BigInt(11e2));
 
-console.log(Boolean(42));
-console.log(Boolean(0));
-console.log(Boolean(NaN));
+console.log(BigInt(true));
 
-console.log(Boolean("text"));
-console.log(Boolean(""));
+console.log(BigInt("11"));
+console.log(BigInt("0x11"));
 
-console.log(Boolean(undefined));
+//console.log(BigInt(null));        Converting from "null" doesn't work
 
-console.log(Boolean(null));
+//console.log(BigInt(undefined));   Converting from "undefined" doesn't work
+
+//console.log(BigInt(NaN));         Converting from "NaN" doesn't work
