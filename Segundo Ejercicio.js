@@ -1,31 +1,21 @@
 "use strict"
 
-let str = "text";
-let strStr = String(str);
-console.log(`${typeof str} : ${str}`);
-console.log(`${typeof strStr} : ${strStr}`);
+console.log(Number(42));
 
-let nr = 42;
-let strNr = String(nr);
-console.log(`${typeof nr} : ${nr}`);
-console.log(`${typeof strNr} : ${strNr}`);
+console.log(Number("11"));
+console.log(Number("0x11"));
+console.log(Number("0o11"));
+console.log(Number("0b11"));
+console.log(Number("12e3"));
+console.log(Number("Infinity"));
+console.log(Number("text"));
 
-let bl = true;
-let strBl = String(bl);
-console.log(`${typeof bl} : ${bl}`);
-console.log(`${typeof strBl} : ${strBl}`);
+console.log(Number(14n));
+console.log(Number(123456789123456789123n));
 
-let bnr = 123n;
-let strBnr = String(bnr);
-console.log(`${typeof bnr} : ${bnr}`);
-console.log(`${typeof strBnr} : ${strBnr}`);
+console.log(Number(true));
+console.log(Number(false));
 
-let un = undefined;
-let strUn = String(un);
-console.log(`${typeof un} : ${un}`);
-console.log(`${typeof strUn} : ${strUn}`);
+console.log(Number(undefined));
 
-let n = null;
-let strN = String(n);
-console.log(`${typeof n} : ${n}`);
-console.log(`${typeof strN} : ${strN}`);
+console.log(Number(null));
