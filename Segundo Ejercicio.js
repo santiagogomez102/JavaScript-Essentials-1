@@ -1,38 +1,41 @@
 "use strict"
 
-let testObj = {
-    nr: 600,
-    str: "text"
-};
+let days = ["Sun", "Mon", "Tue", "Wen", "Thu", "Fri", "Sat"];
+console.log(days[0]);
+console.log(days[2]);
+console.log(days[5]);
 
-console.log(testObj.nr);
-console.log(testObj.str);
+days[0] = "Sunday";
+console.log(days[0]);
 
-//////////////
+/////////////////
 
-let user1 = {
-    name: "Calvin",
-    surname: "Hart",
-    age: 66,
-    email: "CalvinMHart@teleworm.us"
-}
+let emptyArray = [];
+console.log(emptyArray[0]);
 
-let user2 = {
-    name: "Mateus",
-    surname: "Pinto",
-    age: 21,
-    email: "MateusPinto@dayrep.com"
-}
+/////////////////
 
-console.log(user1.name);
-console.log(user2.name);
+let animals = [];
+console.log(animals[0]);
 
-console.log(user1.age);
-user1.age = 67;
-console.log(user1.age);
+animals[0] = "dog";
+animals[2] = "cat";
 
-console.log(user2.phone);       //property doesn't exist
-user2.phone = "904-3997557";    //new property defined that didn't exist
-console.log(user2.phone);
-delete user2.phone;             //property deleted
-console.log(user2.phone);
+console.log(animals[0]);
+console.log(animals[1]);
+console.log(animals[2]);
+
+/////////////////
+
+let values = ["Test", 7, 12.3, false];
+
+/////////////////
+
+let names = [["Olivia", "Emma", "Mia", "Sofia"], ["William", "James", "Daniel"]];
+console.log(names[0]);
+console.log(names[0][1]);
+console.log(names[1][1]);
+
+let femaleNames = names[0];
+console.log(femaleNames[0]);
+console.log(femaleNames[2]);
