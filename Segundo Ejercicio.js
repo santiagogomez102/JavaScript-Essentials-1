@@ -1,41 +1,27 @@
 "use strict"
 
-let days = ["Sun", "Mon", "Tue", "Wen", "Thu", "Fri", "Sat"];
-console.log(days[0]);
-console.log(days[2]);
-console.log(days[5]);
+let users = [
+    {
+        name: "Calvin",
+        surname: "Hart",
+        age: 66,
+        email: "CalvinMHart@teleworm.us"
+    },
+    {
+        name: "Mateus",
+        surname: "Pinto",
+        age: 21,
+        email: "MateusPinto@dayrep.com"
+    }
+];
 
-days[0] = "Sunday";
-console.log(days[0]);
+users[2] = {
+    name: "Irene",
+    surname: "Purnell",
+    age: 32,
+    email: "IreneHPurnell@rhyta.com"
+}
 
-/////////////////
-
-let emptyArray = [];
-console.log(emptyArray[0]);
-
-/////////////////
-
-let animals = [];
-console.log(animals[0]);
-
-animals[0] = "dog";
-animals[2] = "cat";
-
-console.log(animals[0]);
-console.log(animals[1]);
-console.log(animals[2]);
-
-/////////////////
-
-let values = ["Test", 7, 12.3, false];
-
-/////////////////
-
-let names = [["Olivia", "Emma", "Mia", "Sofia"], ["William", "James", "Daniel"]];
-console.log(names[0]);
-console.log(names[0][1]);
-console.log(names[1][1]);
-
-let femaleNames = names[0];
-console.log(femaleNames[0]);
-console.log(femaleNames[2]);
+console.log(users[0].name);
+console.log(users[1].name);
+console.log(users[2].name);
