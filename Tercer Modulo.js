@@ -1,19 +1,12 @@
 "use strict"
 
-let year = 2050;
-let newYear = year = 2051;
-
-/* Previous code is the same as:
-let year = 2050;
-year = 2051;
-let newYear = year;
-*/
-
-const x = 5;
-const y = 2;
-console.log(`Addition: `, x + y);
-console.log(`Subtraction: `, x - y);
-console.log(`Multiplication: `, x * y);
-console.log(`Division: `, x / y);
-console.log(`Division reminder: `, x % y);
-console.log(`Exponent: `, x ** y);
+let str = "123";
+let n1 = +str;
+let n2 = -str;
+let n3 = -n2;
+let n4 = +"abdc";
+console.log(`${str} : ${typeof str}`);
+console.log(`${n1} : ${typeof n1}`);
+console.log(`${n2} : ${typeof n2}`);
+console.log(`${n3} : ${typeof n3}`);
+console.log(`${n4} : ${typeof n4}`);
