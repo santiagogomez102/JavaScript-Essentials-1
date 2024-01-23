@@ -1,3 +1,5 @@
+"use strict"
+
 let contacts = [
     {
         name: "Maxwell Wright",
@@ -24,6 +26,18 @@ let newContact = {
 
 contacts.push(newContact);
 
-length = contacts.length - 1;
+let newName = prompt("Input the new contact name:", "Name and surname");
+let newPhone = prompt("Input the new phone number:", "Phone number");
+let newEmail = prompt("Input the new email address:", "Email address");
+
+newContact = {
+    name: newName,
+    phone: newPhone,
+    email: newEmail
+}
+
+contacts.push(newContact);
+
+let last = contacts.length - 1;
 console.log(`${contacts[0].name} / ${contacts[0].phone} / ${contacts[0].email}`);
-console.log(`${contacts[length].name} / ${contacts[length].phone} / ${contacts[length].email}`);
+console.log(`${contacts[last].name} / ${contacts[last].phone} / ${contacts[last].email}`);
