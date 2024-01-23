@@ -1,5 +1,6 @@
 "use strict"
 
-let remove = confirm("Remove all data?");
-let message = remove ? "Deleting Data" : "Cancelled";
-console.log(message);
+let name = window.prompt("What is your name?", "John Doe");
+name = name ? name : "anonymous";
+let age = prompt("Hello " + name + ", how old are you?");
+alert(name + " is " + age + " years old");
