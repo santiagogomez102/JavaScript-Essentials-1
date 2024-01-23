@@ -1,21 +1,31 @@
 "use strict"
 
-console.log(true && true);
-console.log(true && false);
-console.log(false && true);
-console.log(false && false);
+let nr = 0;
+let year = 1970;
+let name = "Alice";
+let empty = "";
+console.log(!nr);
+console.log(!year);
+console.log(!name);
+console.log(!empty);
+console.log(!!nr);
+console.log(!!name);
 
-console.log(true || true);
-console.log(true || false);
-console.log(false || true);
-console.log(false || false);
+console.log(true && 1991);
+console.log(false && 1991);
+console.log(2 && 5);
+console.log(0 && 5);
+console.log("Alice" && "Bob");
+console.log("" && "Bob");
+console.log(true || 1991);
+console.log(false || 1991);
+console.log(2 || 5);
+console.log(0 || 5);
+console.log("Alice" || "Bob");
+console.log("" || "Bob");
 
-console.log(!true);
-console.log(!false);
-
-const a = false;
-const b = true;
-const c = false;
-const d = true;
-console.log(a && b && c || d);
-console.log(a && b && (c || d));
+let x = 0;
+let y = 0;
+console.log(x++ && y++);
+console.log(x);
+console.log(y);
