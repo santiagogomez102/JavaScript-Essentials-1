@@ -1,16 +1,21 @@
 "use strict"
 
-let x = 10;
+console.log(true && true);
+console.log(true && false);
+console.log(false && true);
+console.log(false && false);
 
-x += 2;   //Same as x = x + 2;
-console.log(x);
-x -= 4;   //Same as x = x - 4;
-console.log(x);
-x *= 3;   //Same as x = x * 3;
-console.log(x);
-x /= 6;   //Same as x = x / 6;
-console.log(x);
-x **= 3;   //Same as x = x ** 3;
-console.log(x);
-x %= 10;   //Same as x = x % 10;
-console.log(x);
+console.log(true || true);
+console.log(true || false);
+console.log(false || true);
+console.log(false || false);
+
+console.log(!true);
+console.log(!false);
+
+const a = false;
+const b = true;
+const c = false;
+const d = true;
+console.log(a && b && c || d);
+console.log(a && b && (c || d));
