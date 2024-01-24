@@ -1,9 +1,21 @@
 "use strict"
 
-let price = 100;
-let shippingCost = (price > 50) ? 0 : 5 ;
-console.log(`price = ${price}, shipping = ${shippingCost}`);
-
-let start = confirm("Start?");
-let message = start ? "Here we go!" : "Aborted!";
-alert(message);
+let gate = prompt("Choose gate: a, b, c");
+let win = false;
+switch (gate) {
+    case "a":
+        alert("Gate A: empty");
+        break;
+    case "b":
+        alert("Gate B: main prize");
+        win = true;
+        break;
+    case "c":
+        alert("Gate C: empty");
+        break;
+    default:
+        alert("No gate " + String(gate));
+}
+if (win){
+    alert("Winner!");
+}
