@@ -1,18 +1,26 @@
 "use strict"
 
-for (let i = 0; i < 10; i++) {
-    console.log(i);
+let names = [];
+let isOver = false;
+while (!isOver) {
+    let name = prompt("Enter another name or press cancel.");
+    if (name != null) {
+        names.push(name);
+    } else {
+        isOver = true;
+    }
 }
-
-let i = 0;
-while (i < 10) {
-    console.log(i);
-    i++;
+for (let i = 0; i < names.length ; i++) {
+    console.log(names[i]);
 }
 
 let values = [10, 30, 50, 100];
-let sum = 0;
-for (let i = 0; i < values.length; i++){
-    sum += values[i];
+for (let i = 0; i < values.length; i++) {
+    console.log(values[i]);
 }
-console.log(sum);
+for (let i = values.length - 1; i >= 0; i--) {
+    console.log(values[i]);
+}
+for (let i = 0; i < values.length; i+=2){
+    console.log(values[i]);
+}
