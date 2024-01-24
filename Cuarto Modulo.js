@@ -1,13 +1,15 @@
 "use strict"
 
-let n = 0;
-while(n < 91) {
-    console.log(n); // -> 0, 10, 20, 30, 40, 50, 60, 70, 80, 90
-    n += 10;
-}
-
-let isOver = false;
+let isOver;
 let counter = 1;
-while (!isOver) {
+do {
     isOver = !confirm(`[${counter++}] Continue the loop?`);
+} while (!isOver);
+
+let condition = false;
+while (condition) {
+    console.log("A while loop iteration.");
 }
+do {
+    console.log("A do ... while loop iteration");
+} while (condition);
