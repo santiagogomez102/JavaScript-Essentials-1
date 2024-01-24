@@ -1,15 +1,18 @@
 "use strict"
 
-let isOver;
-let counter = 1;
-do {
-    isOver = !confirm(`[${counter++}] Continue the loop?`);
-} while (!isOver);
-
-let condition = false;
-while (condition) {
-    console.log("A while loop iteration.");
+for (let i = 0; i < 10; i++) {
+    console.log(i);
 }
-do {
-    console.log("A do ... while loop iteration");
-} while (condition);
+
+let i = 0;
+while (i < 10) {
+    console.log(i);
+    i++;
+}
+
+let values = [10, 30, 50, 100];
+let sum = 0;
+for (let i = 0; i < values.length; i++){
+    sum += values[i];
+}
+console.log(sum);
