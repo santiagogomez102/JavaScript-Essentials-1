@@ -1,26 +1,31 @@
 "use strict"
 
-let names = [];
-let isOver = false;
-while (!isOver) {
-    let name = prompt("Enter another name or press cancel.");
-    if (name != null) {
-        names.push(name);
-    } else {
-        isOver = true;
-    }
-}
-for (let i = 0; i < names.length ; i++) {
-    console.log(names[i]);
-}
-
 let values = [10, 30, 50, 100];
+let sum = 0;
 for (let i = 0; i < values.length; i++) {
-    console.log(values[i]);
+    sum += values[i];
 }
-for (let i = values.length - 1; i >= 0; i--) {
-    console.log(values[i]);
+console.log(sum);
+
+sum = 0;
+for (let number of values) {
+    sum += number;
 }
-for (let i = 0; i < values.length; i+=2){
-    console.log(values[i]);
+console.log(sum);
+
+let cities = [
+    { name: "New York", population: 18.65e6 },
+    { name: "Cairo", population: 18.82e6 },
+    { name: "Mumbai", population: 19.32e6 },
+    { name: "Sao Pablo", population: 20.88e6 },
+    { name: "Mexico City", population: 21.34e6 },
+    { name: "Shangai", population: 23.48e6 },
+    { name: "Delhi", population: 25.87e6 },
+    { name: "Tokyo", population: 37.26e6 },
+];
+
+for (let city of cities) {
+    if (city.population > 20e6 && city.population < 25e6) {
+        console.log(`${city.name} (${city.population})`);
+    }
 }
