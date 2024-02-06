@@ -5,7 +5,7 @@ let inner = function() {
 }
 let outer = function(callback) {
     console.log('outer 1');
-    callback();
+    setTimeout(callback, 1000);
     console.log('outer 2');
 }
 console.log('test 1');
