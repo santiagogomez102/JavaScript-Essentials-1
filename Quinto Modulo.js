@@ -1,14 +1,22 @@
 "use strict"
 
-function getMeanTemp(temperatures) {
-    let sum = 0;
-    for (let i = 0; i < temperatures.length; i++){
-        sum += temperatures[i];
-    }
-    return sum / temperatures.length;
+function add(first, second) {
+    return first + second;
 }
 
-let day1 = [12, 12, 11, 11, 10, 9, 9, 10, 12, 13, 15, 18, 21, 24, 24, 23, 25, 25, 23, 21, 20, 19, 17, 16];
-console.log(`mean: ${getMeanTemp(day1)}`);
-let day2 = [17, 16, 14, 12, 10, 10, 10, 11, 13, 14, 15, 17, 22, 27, 29, 29, 27, 26, 24, 21, 19, 18, 17, 16];
-console.log(`mean: ${getMeanTemp(day2)}`);
+let first = 10, second = 20, third = 40, fourth = 80;
+console.log(add(first, second));
+console.log(add(second, third));
+console.log(add(third, fourth));
+
+let a = 100, b = 200, c = 300;
+function test(a) {
+    let b = 10;
+    console.log(a);
+    console.log(b);
+    console.log(c);
+}
+test(1);
+console.log(a);
+console.log(b);
+console.log(c);
