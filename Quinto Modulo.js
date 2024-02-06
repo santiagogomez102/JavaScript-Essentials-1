@@ -1,12 +1,13 @@
 "use strict"
 
-function operation(func, first, second) {
-    return func(first, second);
+let inner = function() {
+    console.log('inner 1');
 }
-let myAdd = function(a, b) {
-    return a + b;
+let outer = function(callback) {
+    console.log('outer 1');
+    callback();
+    console.log('outer 2');
 }
-console.log(operation(myAdd, 10, 20));
-console.log(operation(function(a, b) {
-    return a * b;
-}, 10, 20));
+console.log('test 1');
+outer(inner);
+console.log('test 2');
