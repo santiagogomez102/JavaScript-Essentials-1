@@ -1,20 +1,37 @@
 "use strict"
 
-let inner = function() {
-    console.log('inner 1');
+let add = function(a, b) {
+    return a + b;
 }
-let outer = function(callback) {
-    console.log('outer 1');
-    let timerId = setInterval(callback, 1000);
-    console.log('outer 2');
-    setTimeout(function(){
-        clearInterval(timerId);
-    }, 5500);
-}
-console.log('test 1');
-outer(inner);
-console.log('test 2');
+console.log(add(10, 20));
 
-window.addEventListener("click", function() {
-    console.log("clicked!");
-});
+//////////
+
+add = (a, b) => {
+    return a + b;
+}
+console.log(add(10, 20));
+
+///////////
+
+add = (a, b) => a + b;
+console.log(add(10, 20));
+
+function factorial(n) {
+    return n > 1 ? n * factorial(n - 1) : 1;
+}
+console.log(factorial(5));
+
+factorial = n => n > 1 ? n * factorial(n - 1) : 1;
+console.log(factorial(5));
+
+//////////////
+
+let names = ['Alice', 'Eve', 'John'];
+function showName(element) {
+    console.log(element);
+}
+names.forEach(showName);
+
+showName = (element) => console.log(element);
+names.forEach(showName);
