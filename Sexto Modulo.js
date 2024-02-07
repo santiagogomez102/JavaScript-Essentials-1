@@ -1,14 +1,11 @@
 "use strict"
 
-let a = -2;
+let a = 10;
 try {
     a = b;
-} catch (error) {
-    if (error instanceof ReferenceError) {
-        console.log("Reference error, reset a to -2");
-        a = -2;
-    } else {
-        console.log("Other error - " + error);
-    }
+}  catch (error) {
+    console.log("An error!");
+} finally {
+    console.log("Finally!");
 }
 console.log(a);
