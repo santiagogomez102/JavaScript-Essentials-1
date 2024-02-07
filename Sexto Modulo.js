@@ -1,25 +1,17 @@
 "use strict"
 
-console.log("start");
-try {
-    throw 100;
-} catch (error) {
-    console.log(error);
+let div = function(n1, n2) {
+    if (n2 == 0) {
+        throw new RangeError("Value of divisor can't be 0");
+    }
+    return n1 / n2;
 }
-console.log("end");
 
-function factorial(n) {
-    if (n > 20) {
-        throw new RangeError("Max value 20");
+let numbers = [10, 40, 0, 20, 50];
+for(let number of numbers) {
+    try {
+        console.log(div(1000, number));
+    } catch (error) {
+        console.log(error.message);
     }
-    let result = 1;
-    for (; n > 1; n--) {
-        result = result * n;
-    }
-    return result;
 }
-console.log(factorial(3));
-console.log(factorial(5));
-console.log(factorial(8));
-console.log(factorial(20));
-console.log(factorial(1000));
