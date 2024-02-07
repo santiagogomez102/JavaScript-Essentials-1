@@ -22,19 +22,19 @@ while (true) {
 
     let last = contacts.length - 1;
 
-    let option = prompt("Select an action: 1. Show first contact 2. Show last contact 3. Show all contacts 4. Add new contact 5. Exit program", "1, 2, 3, 4, 5");
-    if (option === "5"){
+    let option = prompt("Select an action: 1. Show a contact 2. Show all contacts 3. Add new contact 4. Exit program", "1, 2, 3, 4");
+    if (option === "4"){
         break;
     }
     switch (option) {
-        case "1": alert(`${contacts[0].name} / ${contacts[0].phone} / ${contacts[0].email}`); break;
-        case "2": alert(`${contacts[last].name} / ${contacts[last].phone} / ${contacts[last].email}`); break;
-        case "3": 
-            for (let i = 0; i <= (contacts.length - 1) ; i++){
-                alert(`${contacts[i].name} / ${contacts[i].phone} / ${contacts[i].email}`);
-            }
+        case "1":
+            let secOption = prompt(`Input index from 0 to ${last}`);
+            showContact(contacts, secOption);
             break;
-        case "4":
+        case "2":
+            showAllContacts(contacts);
+            break;
+        case "3": 
             let newName = prompt("Input the new contact name:", "Name and surname");
             newName = newName ? newName : "NaN";
             let newPhone = prompt("Input the new phone number:", "Phone number");
@@ -44,12 +44,7 @@ while (true) {
             if (newName == "NaN" || newPhone == "NaN" || newEmail == "NaN"){
                 alert("Contact not added");
             } else {
-                let newContact = {
-                    name: newName,
-                    phone: newPhone,
-                    email: newEmail
-                }
-                contacts.push(newContact);
+                addNewContact(contacts, newName, newPhone, newEmail)
                 last = contacts.length - 1;
                 alert(`${contacts[last].name} / ${contacts[last].phone} / ${contacts[last].email}`);
             }
@@ -57,4 +52,31 @@ while (true) {
         default: alert("Error with option input");
     }
 
+}
+
+function showContact(list, index) {
+    if(list instanceof Array) {
+        alert(`${list[index].name} / ${list[index].phone} / ${list[index].email}`);
+    } else {
+        alert(`Parameter error`);
+    }
+}
+
+function showAllContacts(list) {
+    if(list instanceof Array) {
+        for (let i = 0; i <= (list.length - 1) ; i++){
+            alert(`${list[i].name} / ${list[i].phone} / ${list[i].email}`);
+        }
+    } else {
+        alert(`Parameter error`);
+    }
+}
+
+function addNewContact(list, name, phone, email) {
+    let newContact = {
+        name: name,
+        phone: phone,
+        email: email
+    }
+    list.push(newContact);
 }
