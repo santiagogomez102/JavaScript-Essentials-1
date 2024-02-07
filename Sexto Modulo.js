@@ -1,17 +1,15 @@
 "use strict"
 
-let div = function(n1, n2) {
-    if (n2 == 0) {
-        throw new RangeError("Value of divisor can't be 0");
-    }
-    return n1 / n2;
+function outer() {
+    let name = "outer";
+    let str = inner();
+    return str;
 }
-
-let numbers = [10, 40, 0, 20, 50];
-for(let number of numbers) {
-    try {
-        console.log(div(1000, number));
-    } catch (error) {
-        console.log(error.message);
-    }
+function inner() {
+    let name = "inner";
+    return "Hello !";
 }
+console.log("before outer() call");
+debugger;
+console.log(outer());
+console.log("after outer() call");
