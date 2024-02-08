@@ -1,19 +1,30 @@
 "use strict"
 
-let part = 0;
-console.time('Leibniz');
-for (let k = 0; k < 10000000; k++) {
-    part = part + ((-1) ** k) / (2 * k + 1);
+let end = 2; 
+for(let i=1; i <= end; i++){
+    console.log(i); 
 }
-console.timeEnd('Leibniz');
-let pi = part * 4;
-console.log(pi);
 
-let part1 = 0;
-console.time('Leibniz1');
-for(let k = 0; k < 10000000; k++) {
-    part1 = part1 + (k % 2 ? -1 : 1) / (2 * k + 1);
+let counter = 0;
+let maxValue = 10;
+let result = 1;
+debugger;
+for (counter = 0; counter < maxValue; counter++) {
+    console.log(result);
+    result *= maxValue - counter - 1;
 }
-console.timeEnd('Leibniz1'); // -> Leibniz: 175.5458984375 ms
-let pi1 = part1 * 4;
-console.log(pi1);
+console.log("Final result: ", result);
+
+function max(array) { 
+    let maxValue = array[1]; 
+    debugger;
+    for(let i=0; i <= (array.length - 1); i++) {
+        if(array[i] > maxValue) { 
+            maxValue = array[i]; 
+        } 
+    } 
+    return maxValue; 
+} 
+ 
+console.log( max([1, 4, 6, 2])); // -> 6 
+console.log( max([10, 4, 6, 2])); // -> 6
